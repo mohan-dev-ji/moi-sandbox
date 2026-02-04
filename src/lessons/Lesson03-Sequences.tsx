@@ -319,6 +319,10 @@ export const NestedSequences: React.FC = () => {
         <Sequence from={2 * fps} durationInFrames={2 * fps} layout="none">
           <FloatingCircle x={700} y={450} color="#ffe66d" delay={0} />
         </Sequence>
+
+        <Sequence from={2.5 * fps} durationInFrames={2 * fps} layout="none">
+          <FloatingCircle x={900} y={450} color="#ffe66d" delay={0} />
+        </Sequence>
       </Sequence>
     </AbsoluteFill>
   );
@@ -368,8 +372,8 @@ const FloatingCircle: React.FC<{
   return (
     <div style={{
       position: "absolute",
-      left: x,
-      top: y + floatY,
+      left: x + floatY,
+      top: y,
       width: 100,
       height: 100,
       borderRadius: "50%",
